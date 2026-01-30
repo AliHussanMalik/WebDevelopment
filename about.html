@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="nav-placeholder"></div>
+
+    <div class="main-wrapper">
+        <div id="sidebar-placeholder"></div>
+
+        <main>
+            <h1>About Our Team</h1>
+            <p>We are a small group of developers learning the ropes of modular web design. By separating our navigation and sidebar, we've made this site much easier to maintain!</p>
+            <br>
+            <p>Our mission is to build clean, fast, and responsive websites for everyone.</p>
+        </main>
+    </div>
+
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) throw new Error('File not found');
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+
+        loadComponent('nav-placeholder', 'navbar.html');
+        loadComponent('sidebar-placeholder', 'sidebar.html');
+    </script>
+
+</body>
+</html>
