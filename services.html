@@ -9,12 +9,21 @@
 </head>
 <body>
 
-    <div id="nav-placeholder"></div>
+    <div class="container-fluid mt-3">
+    <div class="row">
+        <div id="nav-placeholder" class="col-md-3"></div>
+        <div class="col-md-3">
+            <div id="sidebar-placeholder"></div>
+        </div>
+
 
     <div class="main-wrapper">
-        <div id="sidebar-placeholder"></div>
+        <div id="sidebar-placeholder">
 
-        <main>
+
+            <main class="col-md-9">
+            <div id="content-area" class="p-3 bg-white border rounded shadow-sm"></div>
+            <div id="sidebar-placeholder"></div>
             <h1>What We Do</h1>
             <p>We offer a variety of digital solutions to help your business grow.</p>
             
@@ -28,7 +37,18 @@
                     <p>Making sure your site looks as good as it functions.</p>
                 </div>
             </div>
+            <table class="table table-bordered mt-4">
+                    <thead class="table-light">
+                        <tr><th>Header 1</th><th>Header 2</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Data A</td><td>Data B</td></tr>
+                    </tbody>
+                </table>
         </main>
+        </div>
+
+        
     </div>
 
     <script>
